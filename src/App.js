@@ -11,7 +11,7 @@ function App() {
         </div>
 
         <div className="col-md-2 text-end">
-          <Link to="/admin"><span className="badge bg-success">Login</span></Link>
+          <Link to="/login"><span className="badge bg-success">Login</span></Link>
         </div>
       </div>
 
@@ -25,7 +25,7 @@ function App() {
               <Link to="/movies" className="list-group-item list-group-action">Movies</Link>
               <Link to="/genres" className="list-group-item list-group-action">Genres</Link>
               <Link to="/admin/movies/0" className="list-group-item list-group-action">Add Movie</Link>
-              <Link to="/admin" className="list-group-item list-group-action">Manage Catalogue</Link>
+              <Link to="/manage-catalogue" className="list-group-item list-group-action">Manage Catalogue</Link>
               <Link to="/graphql" className="list-group-item list-group-action">GraphQL</Link>
             </div>
           </nav>
