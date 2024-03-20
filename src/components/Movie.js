@@ -1,8 +1,28 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
 const Movie = () => {
+   const [movie, setMovie] = useState({});
+   let { id } = useParams;
+
+   useEffect(()=>{
+      let myMovie = {
+         id: 1,
+         title: "Highlander",
+         release_date: "1986-03-07",
+         runtime: 116,
+         mpaa_rating: "R",
+         description: "Some long description",
+      }
+      setMovie(myMovie)
+   }, [id])
+
    return (
       <div>
-         <h2>I am just a movie :0</h2>
+         <h2>{movie.title}</h2>
+         <small><em>Released: {movie.release_date}, {movie.runtime} minutes, Rated {movie.mpaa_rating}</em></small>
          <hr></hr>
+         <p>{movie.description}</p>
       </div>
    )
 };
